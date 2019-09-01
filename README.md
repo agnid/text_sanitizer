@@ -9,11 +9,14 @@ or miscellaneous math symbols, they may not be replaced adequately. In such case
 recommended to use script with -replace or -skip operator.
 
 ## Requirements 
-* Program require Python 3.6 or higher and is run from the command line
+* Program require Python 3.6 or higher
 * Source data should use UTF-8 encoding
 
 ## How to use
-Supported command line arguments:
+
+All you need is to run the script from command line. 
+
+And for control-lovers, there are some supported command line arguments:
 
 **1. Input and output file handling:** 
 
