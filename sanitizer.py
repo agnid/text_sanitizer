@@ -1,10 +1,7 @@
 import unidecode
+import unicodedata
 import sys
 import os
-
-'''
-TBD: better support for non-latin languages 
-'''
 
 if "--input" in sys.argv:
     input_path = str(sys.argv[sys.argv.index("--input") + 1])
@@ -19,8 +16,20 @@ if "--output" in sys.argv:
 else:
     output_path = os.path.realpath("output.txt")
 
+replacement_char = None
+if "-skip" or "-replace" in sys.argv:
+    if "-skip" in sys.argv:
+        replacement_char = ""
+    elif "-replace" in sys.argv:
+        replacement_char = "?"
+
 
 def sanitizer(source):
+    if replacement_char is not None:
+        others = ["Lo", "No", "So", "Sm", "Sk"]
+        for x in source:
+            if x.isascii() is False and unicodedata.category(x) in others:
+                source = source.replace(x, replacement_char)
     return unidecode.unidecode(source)
 
 
