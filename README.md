@@ -3,8 +3,8 @@
 Very basic text data parser to escape all non-ASCII characters. Chars will be replaced with its ASCII version 
 (e.g. ą with a, Ô with O, ẞ with ss).
 
-Parser works best for texts in latin alphabet. 
-If your text include characters from non-latin alphabets 
+Parser works best for texts in Latin or Cyrillic alphabets. 
+If your text include characters from non-Latin alphabets 
 or miscellaneous math symbols, they may not be replaced adequately. In such cases it is 
 recommended to use script with -replace or -skip operator.
 
@@ -25,10 +25,10 @@ Supported command line arguments:
 **2. Data handling**
 Important! Using this arguments may slow down the program
 
-**-replace**: unrecognized characters (letters from non-Latin alphabets or non-ASCII math symbols)
+**-replace**: unrecognized characters (such as letters from non-Latin or Cyrillic alphabets or non-ASCII math symbols)
 will be replace with "?"
 
-**-skip**: unrecognized characters (letters from non-Latin alphabets or non-ASCII math symbols)
+**-skip**: unrecognized characters (such as letters from non-Latin or Cyrillic alphabets or non-ASCII math symbols)
 will be removed from encoded text
     
 ## Examples
