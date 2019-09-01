@@ -24,4 +24,4 @@ If source-output.html already exists, all its content will be removed and replac
 ### Example 2
  `python sanitizer.py`
 
-You will be prompted to provide text. Output will be saved in output.txt in the current directory)
+You will be prompted to provide text. Output will be saved in output.txt in the current directory.
